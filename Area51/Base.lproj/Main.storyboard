@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3eE-86-IqY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="m0f-CO-iVW">
+            <objects>
+                <viewController title="Map" id="mJ5-Tv-RL7" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HMy-eA-nek"/>
+                        <viewControllerLayoutGuide type="bottom" id="aB3-DI-WCH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8A9-vy-hc4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rne-um-hc2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rne-um-hc2" firstAttribute="top" secondItem="8A9-vy-hc4" secondAttribute="top" id="IHA-i5-uOM"/>
+                            <constraint firstAttribute="trailing" secondItem="Rne-um-hc2" secondAttribute="trailing" id="R3T-wF-5Vc"/>
+                            <constraint firstItem="aB3-DI-WCH" firstAttribute="top" secondItem="Rne-um-hc2" secondAttribute="bottom" id="VYM-L8-2V9"/>
+                            <constraint firstItem="Rne-um-hc2" firstAttribute="leading" secondItem="8A9-vy-hc4" secondAttribute="leading" id="x8i-zH-Rtq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map-Icon" id="ukr-EE-KYp"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="Rne-um-hc2" id="uy4-Rz-76Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjs-Va-4Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="-3654"/>
+        </scene>
+        <!--Story-->
+        <scene sceneID="QrL-xf-gqU">
+            <objects>
+                <viewController title="Story" id="F3r-gP-nV0" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IRn-KG-HT1"/>
+                        <viewControllerLayoutGuide type="bottom" id="gh7-8m-3eA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yI-bq-pgz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-L1-8KW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0wd-L1-8KW" secondAttribute="bottom" id="4d9-ch-tgP"/>
+                            <constraint firstItem="0wd-L1-8KW" firstAttribute="leading" secondItem="1yI-bq-pgz" secondAttribute="leading" id="eCT-gT-vrC"/>
+                            <constraint firstAttribute="trailing" secondItem="0wd-L1-8KW" secondAttribute="trailing" id="nNy-2X-XRo"/>
+                            <constraint firstItem="0wd-L1-8KW" firstAttribute="top" secondItem="1yI-bq-pgz" secondAttribute="top" id="qHB-JJ-wy1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Story" image="Story-Icon" id="xeh-Of-ylf"/>
+                    <connections>
+                        <outlet property="storyView" destination="0wd-L1-8KW" id="2YR-84-2vB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8T-di-WOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="-3654"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Aem-DT-AP1">
+            <objects>
+                <tabBarController id="3eE-86-IqY" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Kq2-zJ-o0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="F3r-gP-nV0" kind="relationship" relationship="viewControllers" id="xrf-zI-AM0"/>
+                        <segue destination="mJ5-Tv-RL7" kind="relationship" relationship="viewControllers" id="FEg-UW-whH"/>
+                        <segue destination="r0h-vd-OtG" kind="relationship" relationship="viewControllers" id="okq-QA-k15"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwH-2s-VFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-3647"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="32D-Cj-Xwt">
+            <objects>
+                <viewController title="Inventory" id="r0h-vd-OtG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kOu-wz-j7A"/>
+                        <viewControllerLayoutGuide type="bottom" id="OAY-mA-HmX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sgf-NM-NyF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inventory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-dE-Agv">
+                                <rect key="frame" x="265" y="278" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="A3F-dE-Agv" secondAttribute="centerX" id="goi-bX-H8S"/>
+                            <constraint firstAttribute="centerY" secondItem="A3F-dE-Agv" secondAttribute="centerY" id="pv2-z8-kAx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inventory" image="Inventory-Icon" id="kYK-Ow-SN0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRO-G6-deY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="-3654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Inventory-Icon" width="30" height="30"/>
+        <image name="Map-Icon" width="30" height="30"/>
+        <image name="Story-Icon" width="30" height="30"/>
+    </resources>
+</document>
